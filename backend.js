@@ -25,7 +25,9 @@ connection.connect((error) => {
   }
 });
 
-// Register endpoint
+
+
+// Register 
 app.post("/api/register", callbackOnRegister);
 
 function callbackOnRegister(request, response) {
@@ -53,7 +55,9 @@ function callbackOnRegister(request, response) {
   });
 }
 
-// Login endpoint
+
+
+// Login 
 app.post("/api/login", callbackOnLogin);
 
 function callbackOnLogin(request, response) {
@@ -79,7 +83,7 @@ function callbackOnLogin(request, response) {
 
             if (user.isAdmin === 1) {
               console.log("Welcome to the Admin Panel.");
-              // You can handle admin-specific tasks or grant admin privileges here
+              
             }
 
             response.status(200).json({ message: "User logged in successfully", user });
@@ -96,7 +100,7 @@ function callbackOnLogin(request, response) {
   );
 }
 
-//backend-dashboard
+//Dashboard
 
 app.get("/api/car", applyCars);
 
@@ -124,7 +128,7 @@ app.listen(serverPort, () => {
   console.log(`Server is running on port ${serverPort}`);
 });
 
-//backend-dashboard-order-forma
+//dashboard-order-forma
 
 app.post("/api/dashboard", callbackOnDashboardForm);
 
@@ -181,7 +185,7 @@ function callbackOnDashboardForm(request, response) {
 
 
 
-//admin-panel backend
+//admin-panel
 
 app.get("/api/order", applyOrders);
 
@@ -232,7 +236,7 @@ app.delete("/api/order/:orderId", deleteOrder);
 
 function deleteOrder(req, res) {
   const orderId = req.params.orderId;
-  const sqlQuery = `DELETE FROM \`order\` WHERE idorder = ?`; // Enclose 'order' in backticks
+  const sqlQuery = `DELETE FROM \`order\` WHERE idorder = ?`; 
 
   connection.query(sqlQuery, [orderId], (error, result) => {
     if (error) {

@@ -95,7 +95,7 @@ function deleteCar(carId) {
       if (!response.ok) {
         throw new Error("Failed to delete car.");
       }
-      // Reload the page to update the cars table after deletion
+      
       loadPage(initialPage);
     })
     .catch((error) => alert(error));
@@ -110,7 +110,7 @@ function deleteOrder(orderId) {
       if (!response.ok) {
         throw new Error("Failed to delete order.");
       }
-      // Reload the page to update the orders table after deletion
+      
       loadPage(initialPage);
     })
     .catch((error) => alert(error));

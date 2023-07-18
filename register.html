@@ -39,13 +39,15 @@
         $('#registerForm').submit(function(event) {
             event.preventDefault();
     
-            // Get form data
+            
             const nameInput = $('#nameInput').val();
             const emailInput = $('#emailInput').val();
             const usernameInput = $('#usernameInput').val();
             const passwordInput = $('#passwordInput').val();
             const isAdmin = 0;
-            // Create user object
+            
+
+
             const newUser = {
                 nameInput: nameInput,
                 emailInput: emailInput,
@@ -55,7 +57,7 @@
             };
     
             
-            // Send POST request to backend
+            
             $.ajax({
                 url: 'http://localhost:3000/api/register',
                 type: 'POST',
@@ -65,11 +67,11 @@
                     console.log('User registered successfully');
                     window.location.href = '/login.html';
                     uspjesanAccount.innerHTML = "Account created succesfuly, you can login now."
-                    // Handle successful registration (e.g., display success message)
+                    
                 },
                 error: function(error) {
                     console.log('Error registering user:', error);
-                    // Handle registration error (e.g., display error message)
+                    
                 }
             });
         });

@@ -37,7 +37,7 @@
                 passwordInput: passwordInput
             };
         
-            // Send POST request to backend
+            
             $.ajax({
                 url: 'http://localhost:3000/api/login',
                 type: 'POST',
@@ -46,15 +46,15 @@
                 success: function(response) {
                     console.log('User logged in successfully');
 
-                    // Set the loggedInUser and isLoggedIn flags
+                    
                     localStorage.setItem('loggedInUser', JSON.stringify(response.user));
                     localStorage.setItem('isLoggedIn', 'true');
 
                     if (response.user.isAdmin === 1) {
-                        // User is an admin, redirect to admin dashboard
+                        
                         window.location.href = '/admin-panel/admin.html';
                     } else {
-                        // User is a regular user, redirect to regular user dashboard
+                        
                         window.location.href = '/dashboard/dashboard.html';
                     } 
                 },
@@ -62,7 +62,7 @@
             
                 error: function(error) {
                     console.log('Error logging in:', error);
-                    // Handle login error (e.g., display error message)
+                    
                 }
             });
         });

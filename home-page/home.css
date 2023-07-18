@@ -12,10 +12,10 @@ body{
 
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Start with 0 opacity */
+    opacity: 0; 
   }
   to {
-    opacity: 1; /* End with 100% opacity */
+    opacity: 1; 
   }
 }
 
@@ -188,7 +188,7 @@ width: 50%;
       height: auto;
     }
   
-    /* Center the location and about divs in line */
+   
     .location-about {
       flex-direction: row;
       justify-content: space-evenly;

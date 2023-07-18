@@ -106,7 +106,7 @@ function addCarsToTableBody(cars) {
 
 
 
-      // Kalkulisanje ukupne cijene, nakon sto korisnik izabere datum rentanja
+      
       const fromDateInput = carOrderForm.querySelector("#FromDate");
       const toDateInput = carOrderForm.querySelector("#ToDate");
       const totalPriceText = carOrderForm.querySelector("#TotalPrice");
@@ -124,7 +124,7 @@ function addCarsToTableBody(cars) {
       
           totalPriceText.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
       
-          // Update the CustomerPrice value
+          
           CustomerPrice.value = totalPrice; 
         } else {
           totalPriceText.textContent = "Total Price: $0.00";

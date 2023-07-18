@@ -201,11 +201,11 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-            // Retrieve user data from local storage
+            
             const userDataJSON = localStorage.getItem('loggedInUser');
 
             if (!userDataJSON) {
-                // User is not logged in, redirect to the login page
+                
                 window.location.href = '/login.html';
                 return;
             }
@@ -214,14 +214,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const isAdmin = userData.isAdmin === 1;
 
             if (!isAdmin) {
-                // If the user is not an admin, redirect to the regular user dashboard
+                
                 window.location.href = '/dashboard/dashboard.html';
-                return; // Prevent further execution of the script for regular users
+                return; 
             }
 
-            // Continue loading the admin dashboard content here...
-
-            // Example: Load cars or orders, etc.
 
         });
 
