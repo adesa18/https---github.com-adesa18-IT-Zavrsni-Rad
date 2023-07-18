@@ -7,7 +7,7 @@
 
 
 body {
-    font-family: VlastitiFont;
+    
     height: 100%;
     width: 100%;
     margin: 0;
@@ -22,12 +22,6 @@ overflow-x: hidden;
 }
 
 
-@font-face {
-  font-family: Vlastitifont;
-  src: url(https://fonts.google.com/specimen/Roboto?query=Roboto);
-}
-
-
 h1{
   color: white;
 }
@@ -39,7 +33,7 @@ padding-top: 10px;
     display: flex;
     justify-content: space-evenly;
     color: white;
-
+ font-family: VlastitiFont;
     background-color: black;
 
     animation: jumpIn 1s ease-in;

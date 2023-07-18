@@ -5,9 +5,13 @@
 }
 
 
+
+
+
 body{
     background-color: black;
     animation: fadeIn 1s ease-in;
+    font-family: VlastitiFont;
 }
 
 @keyframes fadeIn {
