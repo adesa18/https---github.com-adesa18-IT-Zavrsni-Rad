@@ -489,7 +489,7 @@ text-align: center;
 #orderForm input[type="text"],
 #orderForm input[type="date"],
 #orderForm input[type="number"],
-#orderForm input[type="email"]
+#orderForm input[type="email"],
 #orderForm p[type= "p"]
 
 {
@@ -535,3 +535,13 @@ text-align: center;
   background-color: #d32f2f;
 }
 
+#orderForm input[type="tel"]{
+
+  width: 30%;
+  padding: 0;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px solid black;
+  font-size: 20px;
+  text-align: center;
+}

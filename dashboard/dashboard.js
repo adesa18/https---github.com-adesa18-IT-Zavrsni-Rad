@@ -71,7 +71,7 @@ function addCarsToTableBody(cars) {
           <p>To Date:</p>
           <input type="date" name="toDate" for="ToDate" id="ToDate" placeholder="To Date">
           <hr>
-          <input type="number" for="PhoneNumberInput" name="PhoneNumber" id="PhoneNumberInput" placeholder="Phone Number" required>
+          <input type="tel" for="PhoneNumberInput" name="PhoneNumber" id="PhoneNumberInput" placeholder="Phone Number" required>
           <input type="email" for="CustomerEmail" name="Email" id="CustomerEmail" placeholder="E-Mail" required>
           <p type="price" for="CustomerPrice" name="Price" id="CustomerPrice">${car.price}</p>
           <p id="TotalPrice">Total Price: $0.00</p>
