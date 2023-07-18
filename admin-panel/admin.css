@@ -50,13 +50,13 @@ td {
   padding: 8px;
 }
 
-/* Media queries for responsive design */
+
 @media (max-width: 768px) {
-  /* Center the table content on smaller screens */
+  
   td {
     text-align: center;
   }
-  /* Hide the table header on smaller screens */
+  
   th {
     display: none;
   }
