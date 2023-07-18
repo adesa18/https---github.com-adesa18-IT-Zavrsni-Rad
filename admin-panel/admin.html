@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h1>Hello Admin</h1>
+    <p>Welcome</p>
+    <button id="logOutButton" onclick="logout()">Log Out</button>
+    <hr>
+
+    <h1>Orders</h1>
+
+    <table id="orders-table">
+        <thead>
+            <tr>
+                <th scope="col">ORDER ID</th>
+                <th scope="col">User Order</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">From Date</th>
+                <th scope="col">To Date</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Customer E-Mail</th>
+                <th scope="col">Total Price</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+
+    <table id="cars-table" class="cars-table" style="display: none; width: 100%;">
+        <thead style="width: 100%;">
+            <tr>
+                <th scope="col">Car ID</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Type</th>
+                <th scope="col">Color</th>
+                <th scope="col">Transmission</th>
+                <th scope="col">Engine Type</th>
+                <th scope="col">Engine Power</th>
+                <th scope="col">Produce Year</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody id="cars-table-body">
+
+        </tbody>
+    </table>
+
+    <button id="toggleTableBtn" onclick="toggleTables()">Orders/Cars</button>
+
+    <script src="admin.js" defer></script>
+</body>
+</html>

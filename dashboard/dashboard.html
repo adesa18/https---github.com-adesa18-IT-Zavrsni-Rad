@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+     
+    <style>
+      #suggestDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 30px;
+      }
+    </style>
+</head>
+<body>
+    
+<div class="top">
+
+    <h1>Welcome to <span>Golden</span>Key</h1>
+    <div class="bar">
+<nav>
+<ul>
+    <a href="dashboard.html"><li>Home</li></a>
+    <a href="#suggestDiv"><li>All Cars</li></a>
+    <a href="#adresa"><li>Location</li></a>
+    <a href="#contact-section"><li>Contact</li></a>
+    <a href="" class="logout" id="logout" onclick="logout(event)">Log Out</a>
+</ul>
+
+</nav>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+<div class="offer">
+  
+
+   
+    <img src="https://aamcar.com/wp-content/uploads/2018/07/Nissan-Photo.jpg" alt="">
+    
+    <div class="dashboard-title">
+      <h2>The Perfect Ride for Your Next Journey</h2>
+      <p>Car Rental with over 20.000 satisfied customers.</p>
+    </div>
+      
+</div>
+
+</div>
+   
+  
+
+
+
+<br>
+<br>
+
+
+<hr>
+
+
+
+<div class="suggestDiv" id="suggestDiv">
+
+
+</div>
+<br>
+<br>
+
+
+<hr>
+
+<br>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h1>Where are we located?</h1>
+
+<br>
+<br>
+
+<div class="adresa" id="adresa">
+
+  <div class="opis">
+
+<h1>Kolodvorska 24, Sarajevo.</h1>
+
+<p>Monday-Friday</p>
+<p>9:00-18:00</p>
+
+
+  </div>
+
+
+  <div class="slika-mape">
+<img src="lokacija.JPG" alt="">
+
+
+  </div>
+
+
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h1>CONTACT US</h1>
+<p style="color: white;">via</p>
+
+<div class="contact-section" id="contact-section">
+
+  <div class="card1">
+    <img src="https://www.freeiconspng.com/thumbs/phone-icon/white-phone-icon-png--clipart-best-30.png" height="100px" width="150px">
+    <div class="container">
+
+      <h4><b>Phone</b></h4>
+      <p>+387 33 853 321</p>
+    </div>
+  </div>
+
+  <div class="card1">
+    <img src="email-icon.png" height="100px" width="150px">
+    <div class="container">
+      <h4><b>E-Mail</b></h4>
+      <p>goldenkey@carrental.com</p>
+    </div>
+  </div>
+
+  <div class="card3">
+    <img src="instagram-icon.png" height="90px" width="150px">
+    
+    
+    <div class="container">
+      <h4><b>Instagram</b></h4>
+      <p>@goldenkey_rental</p>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+
+<div class="final-section">
+
+  <div class="author-name">
+
+<p>Author:</p>
+<p>Ahmethodžić Adnan</p>
+  </div>
+
+  
+
+<div class="about-project">
+<p>ITAcademy</p>
+<p>2023.</p>
+
+</div>
+
+
+
+</div>
+
+  
+<script src="dashboard.js" defer>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve user data from local storage
+            const userDataJSON = localStorage.getItem('loggedInUser');
+
+            if (!userDataJSON) {
+                // User is not logged in, redirect to the login page
+                window.location.href = '/login.html';
+                return;
+            }
+
+            const userData = JSON.parse(userDataJSON);
+            const isAdmin = userData.isAdmin === 1;
+
+            if (!isAdmin) {
+                // If the user is not an admin, redirect to the regular user dashboard
+                window.location.href = '/dashboard/dashboard.html';
+                return; // Prevent further execution of the script for regular users
+            }
+
+            // Continue loading the admin dashboard content here...
+
+            // Example: Load cars or orders, etc.
+
+        });
+
+        
+        
+
+
+  </script>
+
+
+
+</body>
+</html>
+
+
+

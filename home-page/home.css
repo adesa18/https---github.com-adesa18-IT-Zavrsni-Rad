@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: black;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* End with 100% opacity */
+  }
+}
+
+.top-sec{
+    
+height: 30px;
+width: 100%;
+color: white;
+display: flex;
+justify-content: center;
+
+padding-top: 3%;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+.opis-slike{
+
+    border-top: 3px solid whitesmoke;
+    border-bottom: 3px solid whitesmoke;
+    
+    background: rgb(255,255,255);
+  background: linear-gradient(225deg, rgba(255,255,255,0) 0%, rgba(184,85,85,1) 0%, rgba(0,0,0,1) 0%, rgba(159,19,19,1) 100%, rgba(47,22,22,1) 100%, rgba(33,102,199,1) 100%);
+
+
+
+width: 100%;
+height: 20%;
+display: flex;
+justify-content: space-evenly;
+
+padding-top: 10%;
+
+}
+
+.opis{
+    margin: 1%;
+    width: 50%;
+    height: 10%;
+   
+    text-align: center;
+   display: inline-block;
+   color: white;
+
+   font-size: 30px;
+   font-family: MainFont;
+
+   
+}
+
+
+.slike{
+    
+    
+   width: 50%;
+   height: 20%;
+   align-items: center;
+   text-align: center;
+}
+
+.slike img{
+    align-content: center;
+padding: 1%;
+}
+
+
+
+.opis span{
+  font-size: 50px;
+    color: yellow;
+    color: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(34,195,115,1) 0%, rgba(0,137,248,1) 99%);
+    
+}
+
+.opis span p{
+    color: white;
+    font-size: 25px;
+}
+
+.opis button{
+    height: 50px;
+    width: 150px;
+    color: whitesmoke;
+    background-color: black;
+   border-radius: 20px;
+   border: 2px solid white;
+   font-size: 20px;
+   text-decoration-style: solid;
+   font-weight: bold;
+
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif  ;
+
+    
+}
+
+.opis button:hover{
+    color: yellow;
+    
+
+}
+
+
+
+.location-about{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-align: center;
+   align-items: center;
+    width: 100%;
+    display: flex;
+justify-content: space-evenly;
+    color: white;
+
+    padding-top: 10%;
+
+    background-color: black;
+
+   
+}
+
+.location{
+width: 50%;
+padding-left: 10px;
+font-size: 20px;
+text-align: left;
+
+}
+
+.about{
+    padding-top: 0.5%;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 20px;
+width: 50%;
+
+}
+
+
+
+
+  
+
+@media screen and (max-width: 770px) {
+    .opis-slike {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20%;
+    }
+  
+    .opis {
+      width: 80%;
+      font-size: 20px;
+      padding-top: 20px;
+      text-align: center;
+    }
+  
+    .slike {
+      width: 80%;
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .slike img {
+      width: 80%;
+      height: auto;
+    }
+  
+    /* Center the location and about divs in line */
+    .location-about {
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-top: 10%;
+    }
+  
+    .location,
+    .about {
+      width: 50%;
+      padding-top: 0.5%;
+      padding-left: 20px;
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+  
+  
+  @media screen and (max-width: 480px) {
+    .opis {
+      font-size: 18px;
+    }
+  
+    button {
+      font-size: 18px;
+    }
+  }

@@ -1,0 +1,64 @@
+* {
+  padding: 10px;
+}
+
+.welcome{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    225deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(184, 85, 85, 1) 0%,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(159, 19, 19, 1) 100%,
+    rgba(47, 22, 22, 1) 100%,
+    rgba(33, 102, 199, 1) 100%
+  );
+}
+
+h1 {
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr {
+  color: white;
+  font-size: 15px;
+}
+
+th {
+  color: white;
+}
+
+td {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  /* Center the table content on smaller screens */
+  td {
+    text-align: center;
+  }
+  /* Hide the table header on smaller screens */
+  th {
+    display: none;
+  }
+}
+

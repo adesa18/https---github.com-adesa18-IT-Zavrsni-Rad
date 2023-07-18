@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+<div class="SignUpForm">
+    <form id="registerForm">
+        <h1>Create New Account</h1>
+        <br>
+        <input type="text" for="nameInput" name="Name" id="nameInput" placeholder="Name" required>
+        <input type="email" for="emailInput" name="Email" id="emailInput" placeholder="E-Mail" required>
+        <br>
+        <br>
+        <input type="text" for="usernameInput" name="Username" id="usernameInput" placeholder="Username" required>
+        <input type="password" for="passwordInput" name="Password" id="passwordInput" placeholder="Password" required>
+        <br>
+        <br>
+        <input type="submit"name="Submit" id="Submit" value="Register"style="width: 100px; height: 50px; background-color: greenyellow; font-size: 15px;">
+        <br>
+        <br>
+        <a href="../sign-forms/sign-in.html"><p>Already a member? Sign In!</p></a>
+        
+    </form>
+</div>
+
+<script>
+
+
+
+
+    $(document).ready(function() {
+        $('#registerForm').submit(function(event) {
+            event.preventDefault();
+    
+            // Get form data
+            const nameInput = $('#nameInput').val();
+            const emailInput = $('#emailInput').val();
+            const usernameInput = $('#usernameInput').val();
+            const passwordInput = $('#passwordInput').val();
+            const isAdmin = 0;
+            // Create user object
+            const newUser = {
+                nameInput: nameInput,
+                emailInput: emailInput,
+                usernameInput: usernameInput,
+                passwordInput: passwordInput,
+                isAdmin: isAdmin
+            };
+    
+            
+            // Send POST request to backend
+            $.ajax({
+                url: 'http://localhost:3000/api/register',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(newUser),
+                success: function(response) {
+                    console.log('User registered successfully');
+                    window.location.href = '/login.html';
+                    uspjesanAccount.innerHTML = "Account created succesfuly, you can login now."
+                    // Handle successful registration (e.g., display success message)
+                },
+                error: function(error) {
+                    console.log('Error registering user:', error);
+                    // Handle registration error (e.g., display error message)
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
