@@ -199,7 +199,7 @@ $(document).ready(function() {
     const CustomerEmail = $('#CustomerEmail').val();
     const CustomerPrice = $('#CustomerPrice').val();
 
-    //kreiranje objekata u narudzbu
+    
     const newOrder = {
       UserOrderDetails: UserOrderDetails,
       FirstNameInput: FirstNameInput,
@@ -224,7 +224,7 @@ $(document).ready(function() {
       if (response.ok) {
         console.log('Your Order has been sent successfully');
         
-        $('#orderForm')[0].reset(); // Reset the form
+        $('#orderForm')[0].reset(); 
         $('#confirmationMessage').text('Order sent, we will contact you as soon as possible'); 
         zatvoriFormu();
       } else {
